@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('/cek', [AtmController::class, 'cek_saldo']);
+Route::post('/tarik', [AtmController::class, 'tarik_tunai']);
+Route::post('/transfer', [AtmController::class, 'transfer']);
+Route::post('/tariktunai', [AtmController::class, 'tariktunai']);
